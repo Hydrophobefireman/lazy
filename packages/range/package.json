@@ -1,0 +1,12 @@
+{
+   "name": "range",
+   "version": "0.0.3-11-11-2021-22-18",
+   "private": true,
+   "main": "src/index.js",
+   "module": "src/index.js",
+   "types": "src/index.d.ts",
+   "license": "MIT",
+   "scripts": {},
+   "type": "module",
+   "peerDependencies": {}
+}
