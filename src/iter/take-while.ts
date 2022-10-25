@@ -1,4 +1,4 @@
-export function* skipWhile<T>(
+export function* takeWhile<T>(
   it: Iterator<T>,
   predicate: (value: T) => unknown
 ): Generator<T, void, unknown> {

@@ -10,6 +10,7 @@ import {scan} from "./iter/scan.js";
 import {skipWhile} from "./iter/skip-while.js";
 import {skip} from "./iter/skip.js";
 import {stepBy} from "./iter/step-by.js";
+import {takeWhile} from "./iter/take-while.js";
 import {take} from "./iter/take.js";
 import {zip} from "./iter/zip.js";
 
@@ -99,6 +100,10 @@ class $Iterator<T> implements Iterator<T> {
   public skipWhile(predicate: (value: T) => unknown): $Iterator<T> {
     return new $Iterator(skipWhile(this.it, predicate));
   }
+  public takeWhile(predicate: (value: T) => unknown): $Iterator<T> {
+    return new $Iterator(takeWhile(this.it, predicate));
+  }
+
   public take(n: number): $Iterator<T> {
     return new $Iterator(take(this.it, n));
   }
